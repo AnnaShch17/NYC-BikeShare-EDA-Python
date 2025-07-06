@@ -32,7 +32,7 @@ who the users are, when they tend to ride, and how long their trips usually last
 in urban planning.
 I completed the analysis and visualizations in Python on Kaggle. The notebook can be found here: [NYC Bike Share EDA on Kaggle](https://www.kaggle.com/code/annashcherbinina/eda-new-york-bike-data-anna-shcherbinina).
 
-#Exploring the Dataset
+# Exploring the Dataset
 
 ```
 # This Python 3 environment comes with many helpful analytics libraries installed
@@ -88,6 +88,7 @@ to spot potential issues, such as columns with missing values or incorrect data 
 RangeIndex: 735502 entries, 0 to 735501
 Data columns (total 16 columns):
 
+![df info](https://github.com/user-attachments/assets/b5596ce8-e111-41f9-91ca-6b8b9c763253)
 
 
 
@@ -95,7 +96,7 @@ Data columns (total 16 columns):
 
 
 
-#Let's start EDA.
+# Let's start EDA.
 
 ```df.shape```
 
@@ -117,11 +118,11 @@ After deduplication, there are just 339,620 records in the dataset left.
 
 **Descriptive Statistics**<br>
 
-Mean: The average value of a dataset.<br>
-Median: The middle value when the data is sorted.<br>
-Mode: The most frequently occurring value.<br>
-Standard Deviation: Measures how spread out the data is from the mean.<br>
-Range: The difference between the maximum and minimum values.
+**Mean:** The average value of a dataset.<br>
+**Median:** The middle value when the data is sorted.<br>
+**Mode:** The most frequently occurring value.<br>
+**Standard Deviation:** Measures how spread out the data is from the mean.<br>
+**Range:** The difference between the maximum and minimum values.
 
 ```
 python mean_duration = df['Trip Duration'].mean()
@@ -172,7 +173,8 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
-GRAPH
+
+![Distribution of trip duration](https://github.com/user-attachments/assets/5e11f92f-2be2-4cab-b76b-6f9d754f668f)
 
 
 ```
