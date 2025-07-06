@@ -255,7 +255,9 @@ plt.title('Box Plot of Trip Durations (Filtered)')
 plt.show()
 ```
 
-GRAPH
+
+![Box Plot of Trip Durations Filtered 10000](https://github.com/user-attachments/assets/b707fc9a-145b-4bf2-a9d7-cef6f8869f25)
+
 
 ```
 # Example: Filtering out extremely long trips
@@ -265,7 +267,8 @@ plt.title('Box Plot of Trip Durations (Filtered)')
 plt.show()
 ```
 
-GRAPH
+
+![Box Plot of Trip Durations Filtered 1000](https://github.com/user-attachments/assets/5f18bcb4-2fb0-4875-a1ba-c2e98e6b068e)
 
 
 Let's take a look at the values sorted by Trip Duration in descending order.
@@ -308,7 +311,8 @@ plt.show()
 ```
 
 
-GRAPH
+
+![Box Plot of Trip Durations Filtered Long Trips](https://github.com/user-attachments/assets/af5e2780-0182-4fe6-a72b-857f9072d4f9)
 
 
 ***How to get rid of outlers?*** <br>
