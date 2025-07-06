@@ -185,7 +185,8 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
-GRAPH
+![Distribution of trip duration 20](https://github.com/user-attachments/assets/055e95f2-b8b1-4c0b-99a0-23a17947139b)
+
 
 
 ```
@@ -199,7 +200,8 @@ plt.show()
 ```
 
 
-GRAPH
+![Filtered distribution of trip durations](https://github.com/user-attachments/assets/78b11e0f-a033-4b09-ad4d-417f30a81c8b)
+
 
 ```
 # Example: Filtering out trip durations longer than a reasonable threshold
@@ -212,7 +214,8 @@ plt.show()
 ```
 
 
-GRAPH
+
+![Filtered distribution of trip durations2](https://github.com/user-attachments/assets/b54a4169-5c95-4cb0-8353-c69ebb380d3a)
 
 
 **Box Plot** <br>
@@ -225,7 +228,8 @@ plt.xlabel('Duration (seconds)')
 plt.show()
 ```
 
-GRAPH
+
+![Box Plot of Trip Durations](https://github.com/user-attachments/assets/42ef5a96-3704-4cac-b694-9a2da1460250)
 
 
 ```
@@ -236,7 +240,8 @@ plt.xlabel('Duration (seconds)')
 plt.show()
 ```
 
-GRAPH
+
+![Box Plot of Trip Durations 3600](https://github.com/user-attachments/assets/76d9f3c2-296e-48a9-80ea-a9fbf9d62e1d)
 
 
 The box plot shows where most of the data points lie and highlights outliers that may need further investigation. The "box" represents the middle 50% of the data (interquartile range), and the "whiskers" extend to show the rest of the data, except for outliers.
