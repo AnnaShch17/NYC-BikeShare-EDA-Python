@@ -544,5 +544,72 @@ gender_summary.rename(columns={'mean': 'Average Trip Duration', 'median': 'Media
 print(gender_summary)
 ```
 
+TABLE
+
+
+```
+# Calculate average and median trip durations by gender
+gender_trip_duration = df_filtered.groupby('Gender')['Trip Duration'].agg(['mean', 'median'])
+print(gender_trip_duration)
+
+# Visualize with a box plot
+sns.boxplot(x='Gender', y='Trip Duration', data=df_filtered)
+plt.title('Trip Duration by Gender')
+plt.xlabel('Gender (0 = Not Specified, 1 = Male, 2 = Female)')
+plt.ylabel('Trip Duration (seconds)')
+plt.show()
+```
+
+TABLE
+
+CHART trip duration by gender
+
+
+```
+# Count the number of trips for each gender
+trip_count_by_gender = df_filtered['Gender'].value_counts()
+print(trip_count_by_gender)
+
+# Visualize with a bar plot
+sns.barplot(x=trip_count_by_gender.index, y=trip_count_by_gender.values)
+plt.title('Trip Frequency by Gender')
+plt.xlabel('Gender (0 = Not Specified, 1 = Male, 2 = Female)')
+plt.ylabel('Number of Trips')
+plt.show()
+```
+
+
+SMALL TABLE #20
+
+CHART trip frequency by gender #21
+
+
+```
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#Adding a column 'Age' based on 'Birth Year'
+df['Age'] = 2017 - df['Birth Year']
+df['User Type Encoded'] = df['User Type'].map({'Subscriber': 1, 'Customer': 0})
+
+print(df.head())
+
+#Correlation matrix for numeric fields
+correlation_matrix = df[['Trip_Duration_in_min', 'Age', 'Start Station Latitude', 'Start Station Longitude', 'End Station Latitude', 'End Station Longitude',
+                        'Gender', 'User Type Encoded']].corr()
+
+#Let's build a heatmap
+plt.figure(figsize=(10, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm")
+plt.title("Correlation Matrix for Trip Duration and Other Numeric Variables")
+plt.show()
+```
+
+TABLE BIG ONE
+
+
+
+
 
 
