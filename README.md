@@ -376,7 +376,9 @@ plt.show()
 ```
 
 
-GRAPH
+![Box Plot of Trip Durations Filtered 1269](https://github.com/user-attachments/assets/82382bfa-d349-4c65-8cda-66d7d0d96fba)
+
+
 
 ```df_filtered.shape```
 
@@ -426,7 +428,7 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
-GRAPH
+![Filtered Distribution of Trip Durations 3600](https://github.com/user-attachments/assets/8cac5547-a62f-41a6-ad7c-e42f805b23c3)
 
 
 This histogram represents the filtered distribution of trip durations. Here's how to interpret it:
@@ -497,8 +499,9 @@ plt.show()
 ```
 
 
+![User Type Variation](https://github.com/user-attachments/assets/c9a47afc-759b-4da3-a55a-47c4b4399508)
 
-PIE CHART
+
 
 **How does trip number vary based on gender?** <br>
 
@@ -529,7 +532,7 @@ plt.show()
 ```
 
 
-PIE CHART
+![Gender Variation in Trip Numbers](https://github.com/user-attachments/assets/6b4ebda0-2cf2-4acc-b84d-ca8fdcb7425b)
 
 
 
@@ -562,7 +565,8 @@ plt.show()
 
 TABLE
 
-CHART trip duration by gender
+
+![Trip Duration by Gender](https://github.com/user-attachments/assets/4210f8ad-950c-4f9e-8165-1b01848a01c6)
 
 
 ```
@@ -581,7 +585,8 @@ plt.show()
 
 SMALL TABLE #20
 
-CHART trip frequency by gender #21
+
+![Trip Frequency by Gender](https://github.com/user-attachments/assets/ec91313b-b2c8-45d4-b2c9-702f0a0b50b3)
 
 
 ```
