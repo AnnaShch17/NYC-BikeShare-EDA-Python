@@ -614,7 +614,191 @@ plt.show()
 TABLE BIG ONE
 
 
+HEATMAP
+
+This heatmap displays the correlation matrix for "Trip Duration" and other numeric variables. It visually shows how strongly and in which direction (positive or negative) each pair of variables is correlated.
+
+**Diagonal Values:**
+
+All diagonal values are 1 because a variable is perfectly correlated with itself.
+
+**Trip Duration vs. Other variables:**
+
+Start Station Latitude r= 0.15: a weak positive correlation. End Station Latitude r= 0.11: a weak positive correlation. User Type Encoded r= – 0.21: a weak negative correlation. Other variables (Age, Longitudes, Gender) show very weak correlations close to 0.
+
+**Start Station Latitude and End Station Latitude:**
+
+Correlation of 0.48 – a moderate positive correlation.
+
+**Start Station Longitude and End Station Longitude:**
+
+Correlation of 0.57 – a moderate to strong positive correlation, suggesting that longitudes are often similar for start and end stations.
+
+**Gender and User Type Encoded:**
+
+Correlation of 0.47 – a moderate positive correlation between gender and user type (subscriber and customer).
+
+
+```
+import seaborn as sns
+import matplotlib.pyplot as NotImplemented
+
+#Cross-tabulation of User Type and Gender
+cross_tab = pd.crosstab(df['Gender'], df['User Type'])
+print(cross_tab)
+
+#Plot the relationship
+sns.countplot(x='Gender', hue='User Type', data=df)
+plt.title("User Type Distribution by Gender")
+plt.xlabel("Gender")
+plt.ylabel("Count")
+plt.legend(title="User Type")
+plt.show()
+```
+
+TABLE
+
+CHART User type distribution by gender
+
+
+The moderate positive correlation between gender and user type (subscriber and customer) of 0.47 makes sense because:
+
+Males (1) and Females (2) are predominantly Subscribers (User Type = 1).
+Unknown (0) users have a relatively high proportion in the Customer (User Type=0) category.
+
+
+```
+#Cross-tabulation for stacked bar plot
+cross_tab = pd.crosstab(df['Gender'], df['User Type'])
+
+#Normalize for percentages
+cross_tab_percentage = cross_tab.div(cross_tab.sum(axis=1), axis=0) * 100
+
+#Plot a stacked bar chart
+cross_tab_percentage.plot(kind='bar', stacked=True, color=['coral', 'lightblue'])
+plt.title("User Type Distribution by Gender")
+plt.ylabel("Percentage")
+plt.xlabel("Gender")
+plt.legend(title="User Type", labels=["Customer", "Subscriber"])
+plt.show()
+```
+
+
+GRAPH User type distribution by gender %
+
+
+```
+#Add a new column to check if start and end stations are the same
+df['Same Station'] = df['Start Station ID'] == df['End Station ID']
+
+#Calculate the percentage of trips where the start and end stations are the same
+same_station_percentage = df['Same Station'].mean() * 100
+
+#Print the result
+print(f"Percentage of trips with the same start and end stations: {same_station_percentage:.2f}%")
+```
+
+Percentage of trips with the same start and end stations: 2.42%
+
+
+```
+df['Start Time'] = pd.to_datetime(df['Start Time'])
+
+#Extract numerical features from Start Time
+df['Start Hour'] = df['Start Time'].dt.hour       #Hour of the day
+df['Start Day'] = df['Start Time'].dt.dayofweek   #Day of the week (0=Monday, 6=Sunday)
+df['Start Month'] = df['Start Time'].dt.month     #Month of the year
+
+#Recalculate the correlation matrix
+correlation_matrix = df[['Trip_Duration_in_min', 'Age', 'Start Station Latitude',
+                        'Start Station Longitude', 'End Station Latitude',
+                        'End Station Longitude', 'Start Hour', 'Start Day', 'Start Month']].corr()
+
+#Visualize the updated correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title("Correlation Matrix Including Start Time Features")
+plt.show()
+```
+
+
+GRAPH Correlation matrix including start time features
+
+
+**Trip Duration vs Other Variables:**
+
+Start Station Latitude r=0.15 – a weak positive correlation. End Station Latitude r=0.11 – a weak positive correlation. User Type Encoded r=-0.21 – a weak negative correlation.
+
+
+```
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+#Group by hour and calculate average trip duration
+avg_duration_hour = df.groupby('Start Hour')['Trip_Duration_in_min'].mean()
+
+#Plot the results
+plt.figure(figsize=(10, 6))
+sns.lineplot(x=avg_duration_hour.index, y=avg_duration_hour.values, marker='o')
+plt.title("Average Trip Duration by Hour of Day")
+plt.xlabel("Hour of Day")
+plt.ylabel("Average Trip Duration (minutes)")
+plt.show()
+```
+
+
+GRAPH Average trip duration by hour of day
+
+To have actual days of a week in x axis, I have to create a mapping.
+
+
+```
+df_filtered['Start Time'] = pd.to_datetime(df['Start Time'])
+df_filtered['Start Day'] = df['Start Time'].dt.dayofweek     #0 = Monday, 6 = Sunday
+
+#Map numeric days to day names
+day_mapping = {
+    0: "Monday",
+    1: "Tuesday",
+    2: "Wednesday",
+    3: "Thursday",
+    4: "Friday",
+    5: "Saturday",
+    6: "Sunday"
+}
+df['Day Name'] = df['Start Day'].map(day_mapping)
+
+#Group by day name and calculate average trip duration
+avg_duration_day = df.groupby('Day Name')['Trip_Duration_in_min'].mean()
+
+#Sort days in weekday order
+avg_duration_day = avg_duration_day.reindex(["Monday", "Tuesday", "Wednesday", 
+                                            "Thursday", "Friday", "Saturday", "Sunday"])
+
+#Plot the results
+plt.figure(figsize=(10, 6))
+sns.barplot(x=avg_duration_day.index, y=avg_duration_day.values, palette="winter")
+plt.title("Average Trip Duration by Day of the Week")
+plt.xlabel("Day of the Week")
+plt.ylabel("Average Trip Duration (minutes)")
+plt.show()
+```
+
+
+GRAPH Average Trip duration by Day of the Week
 
 
 
+**Conclusion: EDA with Python**
 
+This project has demonstrated how Python can be an invaluable tool for conducting Exploratory Data Analysis (EDA). By leveraging powerful libraries such as Pandas, Seaborn, Matplotlib, and Plotly, we were able to efficiently clean, analyze, and visualize data, uncovering important trends and insights.
+
+Through the process of data cleaning, aggregation, and visualization, we gained a deeper understanding of the patterns in bike trip data, such as the differences in trip durations and trip frequencies across gender. The use of groupby(), agg(), and various plotting techniques helped us quickly identify key statistics and make the data more accessible and interpretable.
+
+**Key Takeaways:**
+
+Quick Insights: Python allows for rapid exploration of datasets, providing immediate insights into key metrics and patterns.
+Flexibility: Python’s extensive libraries enable flexible data manipulation and analysis, making it easy to perform both simple and complex EDA tasks.
+Effective Visualization: Tools like Seaborn and Matplotlib helped to present the results in an engaging and informative way, making the data more comprehensible and actionable.
+
+In conclusion, Python is a powerful tool for EDA, providing all the necessary capabilities to clean, explore, and visualize data, ultimately allowing us to make data-driven decisions efficiently and effectively.
