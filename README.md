@@ -69,24 +69,24 @@ Finally, I use df.head() to display the first 5 rows of the DataFrame. This give
 
 ```df.head(5)```
 
-|     |  Trip    |  Start  |   Stop  | Start   | Start    | Start     | Start      | End     | End      | End       | End        | Bike  | User      | 
-|     | Duration |  Time   |   Time  | Station | Station  | Station   | Station    | Station | Station  | Station   | Station    | ID    | Type       |
-|     |          |         |         | ID      | Name     | Latitude  | Longitude  | ID      | Name     | Latitude  | Longitude  |       |            |
-|-----|----------|--- ---- |---------|---------|----------|-----------|------------|---------|----------|-----------|------------|-------|------------|
-|     |          | 2015-   | 2015-   |         | Christ   |           |            |         | Oakland  |           |            |       |            |
-|  0  |   376    | 10-01   | 10-01   |  3212   | Hospital | 40.734786 | -74.050444 |  3207   | Avenue   | 40.737604 | -74.052478 | 24470 | Subscriber |
-|     |          | 00:16:26| 00:22:42|         |          |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Oakland  |           |            |         | Christ   |           |            |       |            |
-|  1  |   739    | 10-01   | 10-01   |  3207   | Avenue   | 40.737604 | -74.052478 |  3212   | Hospital | 40.734786 | -74.050444 | 24481 | Subscriber |
-|     |          | 00:27:12| 00:39:32|         |          |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Lincoln  |           |            |         | Lincoln  |           |            |       |           | 
-|  2  |  2714    | 10-01   | 10-01   |  3193   | Park     | 40.724605 | -74.078406 |  3193   | Park     | 40.724605 | -74.078406 | 24628 | Subscriber |
-|     |          | 00:32:46| 01:18:01|         |          |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Newport  |           |            |         | Warren   |           |            |       |            |
-|  3  |   275    | 10-01   | 10-01   |  3199   | Pkwy     | 40.728745 | -74.032108 |  3187   | St.      | 40.721124 | -74.038051 | 24613 | Subscriber |
-|     |          | 00:34:31| 00:39:06|         |          |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Exchange |           |            |         | Liberty  |           |            |       |            |
-|  4  |   561    | 10-01   | 10-01   |  3183   | Place    | 40.716247 | -74.033459 |  3192   | Light    | 40.711242 | -74.055701 | 24668 | Customer    |     |          | 00:40:12| 00:49:33|         |          |           |            |         | Rail     |           |            |       |            |
+|     |  Trip    |  Start  |   Stop  | Start   | Start   | Start     | Start      | End     | End      | End       | End        | Bike  | User       | 
+|     | Duration |  Time   |   Time  | Station | Station | Station   | Station    | Station | Station  | Station   | Station    | ID    | Type       |
+|     |          |         |         | ID      | Name    | Latitude  | Longitude  | ID      | Name     | Latitude  | Longitude  |       |            |
+|-----|----------|--- ---- |---------|---------|---------|-----------|------------|---------|----------|-----------|------------|-------|------------|
+|     |          | 2015-   | 2015-   |         | Christ  |           |            |         | Oakland  |           |            |       |            |
+|  0  |   376    | 10-01   | 10-01   |  3212   | Hospital| 40.734786 | -74.050444 |  3207   | Avenue   | 40.737604 | -74.052478 | 24470 | Subscriber |
+|     |          | 00:16:26| 00:22:42|         |         |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Oakland |           |            |         | Christ   |           |            |       |            |
+|  1  |   739    | 10-01   | 10-01   |  3207   | Avenue  | 40.737604 | -74.052478 |  3212   | Hospital | 40.734786 | -74.050444 | 24481 | Subscriber |
+|     |          | 00:27:12| 00:39:32|         |         |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Lincoln |           |            |         | Lincoln  |           |            |       |            | 
+|  2  |  2714    | 10-01   | 10-01   |  3193   | Park    | 40.724605 | -74.078406 |  3193   | Park     | 40.724605 | -74.078406 | 24628 | Subscriber |
+|     |          | 00:32:46| 01:18:01|         |         |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Newport |           |            |         | Warren   |           |            |       |            |
+|  3  |   275    | 10-01   | 10-01   |  3199   | Pkwy    | 40.728745 | -74.032108 |  3187   | St.      | 40.721124 | -74.038051 | 24613 | Subscriber |
+|     |          | 00:34:31| 00:39:06|         |         |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Exchange|           |            |         | Liberty  |           |            |       |            |
+|  4  |   561    | 10-01   | 10-01   |  3183   | Place   | 40.716247 | -74.033459 |  3192   | Light    | 40.711242 | -74.055701 | 24668 | Customer    |     |          | 00:40:12| 00:49:33|         |         |           |            |         | Rail     |           |            |       |            |
 
 
 The command df.info() is used to quickly get an overview of the dataset, including:
