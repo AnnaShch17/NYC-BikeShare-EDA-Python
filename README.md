@@ -69,26 +69,6 @@ Finally, I use df.head() to display the first 5 rows of the DataFrame. This give
 
 ```df.head(5)```
 
-|     |  Trip    |  Start  |   Stop  | Start   | Start   | Start     | Start      | End     | End      | End       | End Station Longitude       | 
-|     | Duration |  Time   |   Time  | Station | Station | Station   | Station    | Station | Station  | Station   | Station    |     |    |
-|     |          |         |         | ID      | Name    | Latitude  | Longitude  | ID      | Name     | Latitude  | Longitude  |       |            |
-|-----|----------|--- ---- |---------|---------|---------|-----------|------------|---------|----------|-----------|------------|-------|------------|
-|     |          | 2015-   | 2015-   |         | Christ  |           |            |         | Oakland  |           |            |       |            |
-|  0  |   376    | 10-01   | 10-01   |  3212   | Hospital| 40.734786 | -74.050444 |  3207   | Avenue   | 40.737604 | -74.052478 | 24470 | Subscriber |
-|     |          | 00:16:26| 00:22:42|         |         |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Oakland |           |            |         | Christ   |           |            |       |            |
-|  1  |   739    | 10-01   | 10-01   |  3207   | Avenue  | 40.737604 | -74.052478 |  3212   | Hospital | 40.734786 | -74.050444 | 24481 | Subscriber |
-|     |          | 00:27:12| 00:39:32|         |         |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Lincoln |           |            |         | Lincoln  |           |            |       |            | 
-|  2  |  2714    | 10-01   | 10-01   |  3193   | Park    | 40.724605 | -74.078406 |  3193   | Park     | 40.724605 | -74.078406 | 24628 | Subscriber |
-|     |          | 00:32:46| 01:18:01|         |         |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Newport |           |            |         | Warren   |           |            |       |            |
-|  3  |   275    | 10-01   | 10-01   |  3199   | Pkwy    | 40.728745 | -74.032108 |  3187   | St.      | 40.721124 | -74.038051 | 24613 | Subscriber |
-|     |          | 00:34:31| 00:39:06|         |         |           |            |         |          |           |            |       |            |
-|     |          | 2015-   | 2015-   |         | Exchange|           |            |         | Liberty  |           |            |       |            |
-|  4  |   561    | 10-01   | 10-01   |  3183   | Place   | 40.716247 | -74.033459 |  3192   | Light    | 40.711242 | -74.055701 | 24668 | Customer   | |     |          | 00:40:12| 00:49:33|         |         |           |            |         | Rail     |           |            |       |            |
-
-
 
 | Trip Duration | Start Time       | Stop Time        | Start Station ID | Start Station Name | Start Lat  | Start Long  | End Station ID | End Station Name | End Lat   | End Long   | Bike ID | User Type   |
 |---------------|------------------|------------------|------------------|--------------------|------------|-------------|----------------|------------------|-----------|------------|---------|-------------|
@@ -97,6 +77,7 @@ Finally, I use df.head() to display the first 5 rows of the DataFrame. This give
 | 2714          | 2015-10-01 00:32 | 2015-10-01 01:18 | 3193             | Lincoln Park       | 40.724605  | -74.078406  | 3193           | Lincoln Park     | 40.724605 | -74.078406 | 24628   | Subscriber  |
 | 275           | 2015-10-01 00:34 | 2015-10-01 00:39 | 3199             | Newport Pkwy       | 40.728745  | -74.032108  | 3187           | Warren St.       | 40.721124 | -74.038051 | 24613   | Subscriber  |
 | 561           | 2015-10-01 00:40 | 2015-10-01 00:49 | 3183             | Exchange Place     | 40.716247  | -74.033459  | 3192           | Liberty Rail     | 40.711242 | -74.055701 | 24668   | Customer    |
+
 
 The command df.info() is used to quickly get an overview of the dataset, including:
 
@@ -115,6 +96,24 @@ Data columns (total 16 columns):
 ![df info](https://github.com/user-attachments/assets/b5596ce8-e111-41f9-91ca-6b8b9c763253)
 
 
+| **#** | **Column**                | **Non-Null Count**   | **Dtype** |
+|-------|---------------------------|-----------------------|-----------|
+| 0     | Trip Duration             | 735502 non-null       | int64     |
+| 1     | Start Time                | 735502 non-null       | object    |
+| 2     | Stop Time                 | 735502 non-null       | object    |
+| 3     | Start Station ID          | 735502 non-null       | int64     |
+| 4     | Start Station Name        | 735502 non-null       | object    |
+| 5     | Start Station Latitude    | 735502 non-null       | float64   |
+| 6     | Start Station Longitude   | 735502 non-null       | float64   |
+| 7     | End Station ID            | 735502 non-null       | int64     |
+| 8     | End Station Name          | 735502 non-null       | object    |
+| 9     | End Station Latitude      | 735502 non-null       | float64   |
+| 10    | End Station Longitude     | 735502 non-null       | float64   |
+| 11    | Bike ID                   | 735502 non-null       | int64     |
+| 12    | User Type                 | 735502 non-null       | object    |
+| 13    | Birth Year                | 735502 non-null       | float64   |
+| 14    | Gender                    | 735502 non-null       | int64     |
+| 15    | Trip_Duration_in_min      | 735502 non-null       | int64     |
 
 
 
