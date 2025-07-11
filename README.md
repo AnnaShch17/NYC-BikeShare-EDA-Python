@@ -65,13 +65,28 @@ I used df.drop() to remove it, specifying axis=1 to drop a column (not a row) an
 
 ```df.drop("Unnamed: 0",axis=1,inplace =True)```
 
-Finally, I use df.head() to display the first 5 rows of the DataFrame. This gives a quick snapshot of the data, so I can see what it looks like and start 
-understanding the structure of the dataset, such as column names and sample values.
+Finally, I use df.head() to display the first 5 rows of the DataFrame. This gives a quick snapshot of the data, so I can see what it looks like and start understanding the structure of the dataset, such as column names and sample values.
 
 ```df.head(5)```
 
-TABLE
-
+|     |  Trip    |  Start  |   Stop  | Start   | Start    | Start     | Start      | End     | End      | End       | End        | Bike  | User      | 
+|     | Duration |  Time   |   Time  | Station | Station  | Station   | Station    | Station | Station  | Station   | Station    | ID    | Type       |
+|     |          |         |         | ID      | Name     | Latitude  | Longitude  | ID      | Name     | Latitude  | Longitude  |       |            |
+|-----|----------|--- ---- |---------|---------|----------|-----------|------------|---------|----------|-----------|------------|-------|------------|
+|     |          | 2015-   | 2015-   |         | Christ   |           |            |         | Oakland  |           |            |       |            |
+|  0  |   376    | 10-01   | 10-01   |  3212   | Hospital | 40.734786 | -74.050444 |  3207   | Avenue   | 40.737604 | -74.052478 | 24470 | Subscriber |
+|     |          | 00:16:26| 00:22:42|         |          |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Oakland  |           |            |         | Christ   |           |            |       |            |
+|  1  |   739    | 10-01   | 10-01   |  3207   | Avenue   | 40.737604 | -74.052478 |  3212   | Hospital | 40.734786 | -74.050444 | 24481 | Subscriber |
+|     |          | 00:27:12| 00:39:32|         |          |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Lincoln  |           |            |         | Lincoln  |           |            |       |           | 
+|  2  |  2714    | 10-01   | 10-01   |  3193   | Park     | 40.724605 | -74.078406 |  3193   | Park     | 40.724605 | -74.078406 | 24628 | Subscriber |
+|     |          | 00:32:46| 01:18:01|         |          |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Newport  |           |            |         | Warren   |           |            |       |            |
+|  3  |   275    | 10-01   | 10-01   |  3199   | Pkwy     | 40.728745 | -74.032108 |  3187   | St.      | 40.721124 | -74.038051 | 24613 | Subscriber |
+|     |          | 00:34:31| 00:39:06|         |          |           |            |         |          |           |            |       |            |
+|     |          | 2015-   | 2015-   |         | Exchange |           |            |         | Liberty  |           |            |       |            |
+|  4  |   561    | 10-01   | 10-01   |  3183   | Place    | 40.716247 | -74.033459 |  3192   | Light    | 40.711242 | -74.055701 | 24668 | Customer    |     |          | 00:40:12| 00:49:33|         |          |           |            |         | Rail     |           |            |       |            |
 
 
 The command df.info() is used to quickly get an overview of the dataset, including:
@@ -547,7 +562,13 @@ gender_summary.rename(columns={'mean': 'Average Trip Duration', 'median': 'Media
 print(gender_summary)
 ```
 
-TABLE
+**Trip Duration Statistics and Total Number of Trips by Gender**
+
+| Gender | Average Trip Duration (sec) | Mediam Trip Duration (sec) | Number of Trips |
+|--------|-----------------------------|----------------------------|-----------------|
+|   0    |          610.04             |            562.0           |     17,550      |
+|   1    |          412.17             |            336.0           |    227,201      |
+|   2    |          435.77             |            372.0           |     64,278      |
 
 
 ```
@@ -563,7 +584,14 @@ plt.ylabel('Trip Duration (seconds)')
 plt.show()
 ```
 
-TABLE
+**Average and Median Trip Duration by Gender**
+
+| Gender | Average Trip Duration (sec) | Mediam Trip Duration (sec) | 
+|--------|-----------------------------|----------------------------|
+|   0    |          610.04             |            562.0           |
+|   1    |          412.17             |            336.0           |
+|   2    |          435.77             |            372.0           |
+
 
 
 ![Trip Duration by Gender](https://github.com/user-attachments/assets/4210f8ad-950c-4f9e-8165-1b01848a01c6)
@@ -662,7 +690,13 @@ plt.legend(title="User Type")
 plt.show()
 ```
 
-TABLE
+**User Type Distribution by Gender**
+
+| User Type/ Gender| Customer | Subscriber |
+|------------- ----|----------|------------|
+|        0         |  12,142  |    5,408   |
+|        1         |      18  |  227,183   |
+|        2         |       4  |   64,274   |
 
 CHART User type distribution by gender
 
