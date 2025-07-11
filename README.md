@@ -69,8 +69,8 @@ Finally, I use df.head() to display the first 5 rows of the DataFrame. This give
 
 ```df.head(5)```
 
-|     |  Trip    |  Start  |   Stop  | Start   | Start   | Start     | Start      | End     | End      | End       | End        | Bike  | User       | 
-|     | Duration |  Time   |   Time  | Station | Station | Station   | Station    | Station | Station  | Station   | Station    | ID    | Type       |
+|     |  Trip    |  Start  |   Stop  | Start   | Start   | Start     | Start      | End     | End      | End       | End Station Longitude       | 
+|     | Duration |  Time   |   Time  | Station | Station | Station   | Station    | Station | Station  | Station   | Station    |     |    |
 |     |          |         |         | ID      | Name    | Latitude  | Longitude  | ID      | Name     | Latitude  | Longitude  |       |            |
 |-----|----------|--- ---- |---------|---------|---------|-----------|------------|---------|----------|-----------|------------|-------|------------|
 |     |          | 2015-   | 2015-   |         | Christ  |           |            |         | Oakland  |           |            |       |            |
@@ -86,8 +86,17 @@ Finally, I use df.head() to display the first 5 rows of the DataFrame. This give
 |  3  |   275    | 10-01   | 10-01   |  3199   | Pkwy    | 40.728745 | -74.032108 |  3187   | St.      | 40.721124 | -74.038051 | 24613 | Subscriber |
 |     |          | 00:34:31| 00:39:06|         |         |           |            |         |          |           |            |       |            |
 |     |          | 2015-   | 2015-   |         | Exchange|           |            |         | Liberty  |           |            |       |            |
-|  4  |   561    | 10-01   | 10-01   |  3183   | Place   | 40.716247 | -74.033459 |  3192   | Light    | 40.711242 | -74.055701 | 24668 | Customer    |     |          | 00:40:12| 00:49:33|         |         |           |            |         | Rail     |           |            |       |            |
+|  4  |   561    | 10-01   | 10-01   |  3183   | Place   | 40.716247 | -74.033459 |  3192   | Light    | 40.711242 | -74.055701 | 24668 | Customer   | |     |          | 00:40:12| 00:49:33|         |         |           |            |         | Rail     |           |            |       |            |
 
+
+
+| Trip Duration | Start Time       | Stop Time        | Start Station ID | Start Station Name | Start Lat  | Start Long  | End Station ID | End Station Name | End Lat   | End Long   | Bike ID | User Type   |
+|---------------|------------------|------------------|------------------|--------------------|------------|-------------|----------------|------------------|-----------|------------|---------|-------------|
+| 376           | 2015-10-01 00:16 | 2015-10-01 00:22 | 3212             | Christ Hospital    | 40.734786  | -74.050444  | 3207           | Oakland Avenue   | 40.737604 | -74.052478 | 24470   | Subscriber  |
+| 739           | 2015-10-01 00:27 | 2015-10-01 00:39 | 3207             | Oakland Avenue     | 40.737604  | -74.052478  | 3212           | Christ Hospital  | 40.734786 | -74.050444 | 24481   | Subscriber  |
+| 2714          | 2015-10-01 00:32 | 2015-10-01 01:18 | 3193             | Lincoln Park       | 40.724605  | -74.078406  | 3193           | Lincoln Park     | 40.724605 | -74.078406 | 24628   | Subscriber  |
+| 275           | 2015-10-01 00:34 | 2015-10-01 00:39 | 3199             | Newport Pkwy       | 40.728745  | -74.032108  | 3187           | Warren St.       | 40.721124 | -74.038051 | 24613   | Subscriber  |
+| 561           | 2015-10-01 00:40 | 2015-10-01 00:49 | 3183             | Exchange Place     | 40.716247  | -74.033459  | 3192           | Liberty Rail     | 40.711242 | -74.055701 | 24668   | Customer    |
 
 The command df.info() is used to quickly get an overview of the dataset, including:
 
