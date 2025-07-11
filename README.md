@@ -583,7 +583,13 @@ plt.show()
 ```
 
 
-SMALL TABLE #20
+Number of Trips by Gender
+
+| Gender | Number of Trips | 
+|--------|-----------------|
+|   1    |    227,201      | 
+|   2    |     64,278      | 
+|   0    |     17,550      |
 
 
 ![Trip Frequency by Gender](https://github.com/user-attachments/assets/ec91313b-b2c8-45d4-b2c9-702f0a0b50b3)
