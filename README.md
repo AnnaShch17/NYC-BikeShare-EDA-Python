@@ -731,6 +731,13 @@ plt.show()
 
 **TABLE BIG ONE**
 Matrix
+| Trip Duration | Start Time          | Stop Time           | Start Station Name | End Station Name     | Bike ID | User Type   | Birth Year | Gender | Age |
+|---------------|---------------------|----------------------|--------------------|----------------------|---------|-------------|------------|--------|-----|
+| 376           | 2015-10-01 00:16:26 | 2015-10-01 00:22:42  | Christ Hospital    | Oakland Ave          | 24470   | Subscriber  | 1960.0     | 1      | 57  |
+| 739           | 2015-10-01 00:27:12 | 2015-10-01 00:39:32  | Oakland Ave        | Christ Hospital      | 24481   | Subscriber  | 1960.0     | 1      | 57  |
+| 275           | 2015-10-01 00:34:31 | 2015-10-01 00:39:06  | Newport Pkwy       | Warren St            | 24613   | Subscriber  | 1975.0     | 1      | 42  |
+| 561           | 2015-10-01 00:40:12 | 2015-10-01 00:49:33  | Exchange Place     | Liberty Light Rail   | 24668   | Customer    | 1984.0     | 0      | 33  |
+| 365           | 2015-10-01 00:41:46 | 2015-10-01 00:47:51  | Heights Elevator   | Central Ave          | 24644   | Customer    | 1984.0     | 0      | 33  |
 
 
 HEATMAP
