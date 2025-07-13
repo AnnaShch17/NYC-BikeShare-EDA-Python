@@ -684,7 +684,7 @@ plt.show()
 ```
 
 
-Number of Trips by Gender
+**Number of Trips by Gender**
 
 | Gender | Number of Trips | 
 |--------|-----------------|
@@ -729,8 +729,9 @@ plt.title("Correlation Matrix for Trip Duration and Other Numeric Variables")
 plt.show()
 ```
 
-**TABLE BIG ONE**
-Matrix
+**Correlation Matrix**
+
+
 | Trip Duration | Start Time          | Stop Time           | Start Station Name | End Station Name     | Bike ID | User Type   | Birth Year | Gender | Age |
 |---------------|---------------------|----------------------|--------------------|----------------------|---------|-------------|------------|--------|-----|
 | 376           | 2015-10-01 00:16:26 | 2015-10-01 00:22:42  | Christ Hospital    | Oakland Ave          | 24470   | Subscriber  | 1960.0     | 1      | 57  |
@@ -740,7 +741,8 @@ Matrix
 | 365           | 2015-10-01 00:41:46 | 2015-10-01 00:47:51  | Heights Elevator   | Central Ave          | 24644   | Customer    | 1984.0     | 0      | 33  |
 
 
-HEATMAP
+![Correlation Matrix for Trip Duration](https://github.com/user-attachments/assets/8fe82549-b9f7-4fb4-b336-ff61839a0b69)
+
 
 This heatmap displays the correlation matrix for "Trip Duration" and other numeric variables. It visually shows how strongly and in which direction (positive or negative) each pair of variables is correlated.
 
@@ -791,13 +793,9 @@ plt.show()
 | **Gender 2**  | 4            | 64274          |
 
 
-| User Type/ Gender| Customer | Subscriber |
-|------------- ----|----------|------------|
-|        0         |  12,142  |    5,408   |
-|        1         |      18  |  227,183   |
-|        2         |       4  |   64,274   |
 
-CHART User type distribution by gender
+
+![User Type Distribution by Gender](https://github.com/user-attachments/assets/99514afb-a286-4f35-a819-bea0dc49c10a)
 
 
 The moderate positive correlation between gender and user type (subscriber and customer) of 0.47 makes sense because:
@@ -823,7 +821,8 @@ plt.show()
 ```
 
 
-GRAPH User type distribution by gender %
+
+![User Type Distribution by Gender %](https://github.com/user-attachments/assets/a27e924b-3a5b-40ca-96ae-51117328eecc)
 
 
 ```
@@ -861,7 +860,10 @@ plt.show()
 ```
 
 
-GRAPH Correlation matrix including start time features
+
+![Correlation Matrix Including Start Time Features](https://github.com/user-attachments/assets/dba8677b-b381-4ccc-b063-64fadebb2a66)
+
+
 
 
 **Trip Duration vs Other Variables:**
@@ -886,9 +888,12 @@ plt.show()
 ```
 
 
-GRAPH Average trip duration by hour of day
 
-To have actual days of a week in x axis, I have to create a mapping.
+![Average Trip duration by Hour of Day](https://github.com/user-attachments/assets/c91ee70b-246f-4aa2-a6d6-bef6cd6a25b2)
+
+
+
+To have actual days of a week in x axis, I created a mapping.
 
 
 ```
@@ -924,20 +929,23 @@ plt.show()
 ```
 
 
-GRAPH Average Trip duration by Day of the Week
+
+![Average Trip duration by Day of the Week](https://github.com/user-attachments/assets/500f2dc4-56b4-4080-b6cc-e223b0c61b09)
 
 
 
-**Conclusion: EDA with Python**
+**Conclusion:**
 
-This project has demonstrated how Python can be an invaluable tool for conducting Exploratory Data Analysis (EDA). By leveraging powerful libraries such as Pandas, Seaborn, Matplotlib, and Plotly, we were able to efficiently clean, analyze, and visualize data, uncovering important trends and insights.
+This project highlights the effectiveness of Python for Exploratory Data Analysis (EDA). Using libraries like Pandas, Seaborn, Matplotlib, and Plotly, I cleaned, explored, and visualized the data efficiently, revealing meaningful patterns and insights.
 
-Through the process of data cleaning, aggregation, and visualization, we gained a deeper understanding of the patterns in bike trip data, such as the differences in trip durations and trip frequencies across gender. The use of groupby(), agg(), and various plotting techniques helped us quickly identify key statistics and make the data more accessible and interpretable.
+Throughout the analysis, I applied techniques such as data cleaning, grouping, aggregation, and visualization to better understand trends in bike trip data. Functions like groupby() and agg(), along with various plots, allowed to examine differences in trip duration and frequency by gender, making the data easier to interpret and draw conclusions from.
 
 **Key Takeaways:**
 
-Quick Insights: Python allows for rapid exploration of datasets, providing immediate insights into key metrics and patterns.
-Flexibility: Python’s extensive libraries enable flexible data manipulation and analysis, making it easy to perform both simple and complex EDA tasks.
-Effective Visualization: Tools like Seaborn and Matplotlib helped to present the results in an engaging and informative way, making the data more comprehensible and actionable.
+Quick Insights: Python makes it easy to dive into a dataset and helps spotting patterns and key metrics right away.
 
-In conclusion, Python is a powerful tool for EDA, providing all the necessary capabilities to clean, explore, and visualize data, ultimately allowing us to make data-driven decisions efficiently and effectively.
+Flexibility: With so many great libraries available, Python gives you the freedom to handle everything from basic summaries to more complex analysis without much hassle.
+
+Clear Visualization: Libraries like Seaborn and Matplotlib made it simple to turn raw data into clear, compelling visuals that help tell the story behind the numbers.
+
+Overall, Python proved to be a reliable tool for exploratory data analysis. It gave everything to clean, explore, and visualize the data—making it easier to understand what’s going on and support data-informed decisions.
